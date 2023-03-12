@@ -1,0 +1,780 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --word-color: #ff4321;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #eeeef4;
+  font-size: 26px;
+  color: black;
+}
+
+.introducingYourself {
+  height: 52px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: "Asul", sans-serif;
+  transform: translateY(-700%);
+  transition: transform 2s;
+}
+.introducingYourself span {
+  font-size: 32px;
+  font-family: "Julee", cursive;
+  color: var(--word-color);
+}
+
+.mainText {
+  font-family: "Roboto", sans-serif;
+  margin-top: 50px;
+  color: #808080;
+  transition: transform 2s, opacity 4s;
+}
+
+.hideElementsRight {
+  opacity: 0;
+  transform: translateX(300%);
+}
+
+.hideElementsLeft {
+  opacity: 0;
+  transform: translateX(-300%);
+}
+
+.hideElementsTop {
+  opacity: 0;
+  transform: translatey(-700%);
+}
+
+.returnOfElements {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+.nameOfWeb {
+  position: fixed;
+  z-index: 1;
+}
+.nameOfWeb .burgerMenu {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  height: 35px;
+  width: 38px;
+  padding: 5px 6px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 7px;
+  background: none;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+  cursor: pointer;
+  transition: margin-left 1.5s;
+}
+.nameOfWeb .burgerMenu .line {
+  width: 25px;
+  height: 4px;
+  background-color: var(--word-color);
+  margin-bottom: 5px;
+  transition: transform 1s, transform-origin 1s;
+}
+.nameOfWeb .burgerMenu .line2 {
+  transition: opacity 1s;
+}
+.nameOfWeb .burgerMenu .xBtn1 {
+  width: 31px;
+  transform: rotate(37deg);
+  transform-origin: left;
+  transition: transform 1s, transform-origin 1s;
+}
+.nameOfWeb .burgerMenu .xBtn2 {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.nameOfWeb .burgerMenu .xBtn3 {
+  width: 31px;
+  transform: rotate(-37deg);
+  transform-origin: left;
+  transition: transform 1s, transform-origin 1s;
+}
+.nameOfWeb .allNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 20px;
+  height: 100vh;
+  width: 300px;
+  background-color: #e9edf4;
+  border-right: 2px solid black;
+  border-right-color: rgba(0, 0, 0, 0.04);
+}
+.nameOfWeb .allNav .navLinks {
+  font-family: "Asul", sans-serif;
+}
+.nameOfWeb h1 {
+  font-family: "Asul", sans-serif;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.nameOfWeb h1 span {
+  font-size: 40px;
+  font-family: "Caveat", cursive;
+  color: var(--word-color);
+}
+.nameOfWeb .fa-bars {
+  font-size: 2rem;
+  color: #333;
+}
+.nameOfWeb .fa-x {
+  font-size: 2rem;
+  color: #333;
+}
+.nameOfWeb .navClass {
+  padding: 20px;
+  margin-top: 200px;
+}
+.nameOfWeb .navClass ul {
+  margin-left: 40px;
+  list-style: none;
+}
+.nameOfWeb .navClass ul .border {
+  border-bottom: 2px solid black;
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+.nameOfWeb .navClass ul .border .navLinks {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.4s, transform 0.4s;
+}
+.nameOfWeb .navClass ul .border .navLinks:hover {
+  color: var(--word-color) !important;
+  transform: scale(1.2);
+}
+.nameOfWeb .navClass ul .border .fa-solid {
+  font-size: 15px;
+  margin: 20px;
+}
+
+@media (max-width: 1080px) {
+  .nameOfWeb .burgerMenu {
+    display: flex;
+  }
+  .nameOfWeb .allNav {
+    margin-left: -300px;
+    opacity: 0;
+    transition: margin-left 1.5s, opacity 1.5s, background-color 1s, color 1s;
+  }
+}
+main {
+  margin-top: 120px;
+  max-width: 1400px;
+}
+main .sectionHome {
+  margin-left: 300px;
+}
+main .sectionHome .allMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+main .sectionHome .allMe .textHome {
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+main .sectionHome .allMe .textHome h2 {
+  font-size: 42px;
+  font-family: "Asul" cursive;
+  transition: transform 2s;
+}
+main .sectionHome .allMe .textHome h2 span {
+  font-family: "Julee", cursive;
+  color: var(--word-color);
+}
+main .sectionHome .allMe .imgMe {
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 70px;
+  transition: transform 2s, opacity 4s;
+}
+@media (min-width: 1250px) {
+  main .sectionHome .allMe .imgMe {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media (max-width: 1080px) {
+  main .sectionHome .allMe .imgMe {
+    display: none;
+  }
+}
+@media (max-width: 1080px) {
+  main .sectionHome {
+    margin-left: 0;
+  }
+}
+main .dayNight {
+  position: fixed;
+  padding: 5px;
+  top: 100px;
+  z-index: 2;
+  right: 20px;
+  font-size: 30px;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+main .dayNight i {
+  width: 30px;
+  height: 30px;
+}
+main .moreAboutMe {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--word-color);
+  color: #eeeef4;
+  cursor: pointer;
+  transition: transform 2s 0.5s, opacity 3s 0.5s;
+}
+main .titleOfSection {
+  position: absolute;
+  top: 50px;
+  font-size: 36px;
+  transition: transform 2s;
+}
+main .titleOfSection .longLine {
+  height: 5px;
+  width: 80px;
+  background-color: var(--word-color);
+  border-radius: 20px;
+}
+main .titleOfSection .shortLine {
+  margin-top: 5px;
+  height: 5px;
+  width: 40px;
+  background-color: var(--word-color);
+  border-radius: 20px;
+}
+main .allAboutMe {
+  padding: 20px;
+  margin-left: 300px;
+}
+main .allAboutMe .mainText {
+  font-size: 20px;
+}
+main .allAboutMe .myData {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+main .allAboutMe .myData .leftUlData {
+  transition: transform 2s 1s, opacity 4s 1s;
+}
+main .allAboutMe .myData .rightUlData {
+  transition: transform 2s 1s, opacity 4s 1s;
+}
+main .allAboutMe .myData ul {
+  margin-right: 20px;
+  font-size: 20px;
+  list-style: none;
+}
+main .allAboutMe .myData ul li {
+  margin-top: 20px;
+  color: #808080;
+  border-bottom: 2px solid black;
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+  padding-bottom: 8px;
+  font-family: "Roboto", sans-serif;
+}
+main .allAboutMe .myData ul li span {
+  font-family: "Asul", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+main .allAboutMe .myData .circle {
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 3s 2s, transform 2s 2s;
+}
+main .allAboutMe .myData .circle .progressBars {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .allAboutMe .myData .circle .progressBarOuter {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+main .allAboutMe .myData .circle .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0), inset -4px -4px 6px -1px rgba(255, 255, 255, 0), -0.5px -0.5px 0px rgba(0, 0, 0, 0.15), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0);
+}
+main .allAboutMe .myData .circle .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  stroke-dashoffset: 190;
+  -webkit-animation: progress 3s 3s linear forwards;
+          animation: progress 3s 3s linear forwards;
+}
+main .allAboutMe .myData .circle .progressHtml {
+  stroke-dasharray: 480;
+}
+main .allAboutMe .myData .circle .progressCss {
+  stroke-dasharray: 462;
+}
+main .allAboutMe .myData .circle .progressJs {
+  stroke-dasharray: 427;
+}
+main .allAboutMe .myData .circle .progressReact {
+  stroke-dasharray: 379;
+}
+@-webkit-keyframes progress {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes progress {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+main .allAboutMe .myData .circle .skillsName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+@media (max-width: 1230px) {
+  main .allAboutMe .circle {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  main .allAboutMe .myData {
+    flex-direction: column;
+  }
+}
+main .allAboutMe .buttonsCvHireme {
+  margin-top: -200px;
+  transition: transform 2s 1s, opacity 4s 1s;
+}
+main .allAboutMe .buttonsCvHireme .cvHireme {
+  padding: 15px 30px;
+  margin-top: 100px;
+  margin-left: 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--word-color);
+  color: #eeeef4;
+  cursor: pointer;
+}
+@media (max-width: 416px) {
+  main .allAboutMe .buttonsCvHireme .cvHireme {
+    margin-left: 60px;
+  }
+  main .allAboutMe .buttonsCvHireme .cvHiremeSmaller {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 1230px) {
+  main .allAboutMe .buttonsCvHireme {
+    margin-top: 0;
+  }
+}
+main .allAboutMe .aboutMyLife {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 250px;
+  transform: scale(0.1);
+  opacity: 0.1;
+  transition: transform 2s, opacity 4s;
+}
+main .allAboutMe .aboutMyLife .allAboutEduExp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .allAboutMe .aboutMyLife .description {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+main .allAboutMe .aboutMyLife .description .nameOfDescription {
+  font-size: 23px;
+  font-weight: bold;
+}
+main .allAboutMe .aboutMyLife .description .date {
+  font-size: 16px;
+  color: gray;
+}
+main .allAboutMe .aboutMyLife .description .date i {
+  color: black;
+}
+main .allAboutMe .aboutMyLife .pseudoClass {
+  margin-top: 115px;
+  height: 840px;
+  width: 3px;
+  margin-left: 20px;
+  background-color: var(--word-color);
+  position: relative;
+}
+main .allAboutMe .aboutMyLife .theSameEduExp {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 1000px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+main .allAboutMe .aboutMyLife .pseudoClass::after,
+main .allAboutMe .aboutMyLife .pseudoClass div:nth-child(1),
+main .allAboutMe .aboutMyLife .pseudoClass div:nth-child(2) {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 50%;
+  border-radius: 50%;
+  background-color: var(--word-color);
+  transform: translate(-50%, -50%);
+}
+main .allAboutMe .aboutMyLife .pseudoClass::before {
+  content: "";
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--word-color);
+  transform: translate(-50%, -50%);
+}
+main .allAboutMe .aboutMyLife .pseudoClass div:nth-child(1) {
+  top: 38%;
+  left: 50%;
+}
+main .allAboutMe .aboutMyLife .experience .pseudoClass {
+  margin-top: 40;
+  height: 920px;
+  width: 3px;
+}
+main .allAboutMe .aboutMyLife .experience .pseudoClass div:nth-child(1) {
+  top: 20%;
+  left: 50%;
+}
+main .allAboutMe .aboutMyLife .experience .pseudoClass div:nth-child(2) {
+  top: 47%;
+  left: 50%;
+}
+main .allAboutMe .aboutMyLife .experience .pseudoClass::before {
+  top: 87%;
+}
+@media (max-width: 1400px) {
+  main .allAboutMe .aboutMyLife .experience {
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+  }
+  main .allAboutMe .aboutMyLife .education {
+    margin: auto;
+    width: 340px;
+  }
+}
+@media (max-width: 1200px) {
+  main .allAboutMe .aboutMyLife {
+    flex-direction: column;
+  }
+  main .allAboutMe .experience {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1080px) {
+  main .allAboutMe {
+    margin-left: 0;
+  }
+}
+main .hobby {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 300px;
+  position: relative;
+}
+main .hobby .titleOfSection {
+  top: -70px;
+}
+main .hobby .myStory {
+  margin-top: 100px;
+  max-width: 40%;
+}
+main .hobby .myStory .firstPart {
+  color: #808080;
+  margin-top: 90px;
+}
+@media (max-width: 1350px) {
+  main .hobby .myStory {
+    max-width: 100%;
+  }
+}
+main .hobby .laoyoutWay {
+  width: 80%;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 2.5s, opacity 4s;
+}
+main .hobby .layoutHobby {
+  display: flex;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 2.5s, opacity 4s;
+}
+main .hobby .secoundLayout {
+  margin-top: -100px;
+}
+main .hobby .thirdLayout {
+  margin-top: -60px;
+}
+main .hobby .layoutVisible {
+  opacity: 1;
+  transform: scale(1);
+}
+main .hobby .allcarousel {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 100px;
+  width: 530px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+main .hobby .allcarousel .slides {
+  display: flex;
+}
+main .hobby .allcarousel .slides .slide img {
+  width: 530px;
+  height: 360px;
+}
+main .hobby .allcarousel .imgBtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .hobby .allcarousel .imgBtn .nextImg,
+main .hobby .allcarousel .imgBtn .prevImg {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+@media (max-width: 768px) {
+  main .hobby .allcarousel {
+    width: 400px;
+    height: 250px;
+  }
+  main .hobby .allcarousel img {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  main .hobby .allcarousel {
+    width: 300px;
+    height: 250px;
+  }
+  main .hobby .allcarousel img {
+    width: 300px;
+    height: 250px;
+  }
+}
+main .hobby .allcarousel {
+  margin-right: 30px;
+}
+@media (max-width: 1080px) {
+  main .hobby {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1350px) {
+  main .laoyoutMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+  }
+  main .laoyoutWay {
+    display: none;
+  }
+}
+main .contactSection {
+  margin-left: 300px;
+  padding: 20px;
+}
+main .contactSection .textContact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .contactSection .textContact h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: "Asul", sans-serif;
+  color: var(--word-color);
+}
+main .contactSection .textContact p {
+  color: #808080;
+}
+main .contactSection .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+main .contactSection .icons .iconsTheSame {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .contactSection .icons .iconsTheSame .dataDescription {
+  font-weight: bold;
+}
+main .contactSection .icons .iconsTheSame .data {
+  color: #808080;
+}
+main .contactSection .icons .iconsTheSame i {
+  color: var(--word-color);
+  margin-bottom: 20px;
+}
+@media (max-width: 1080px) {
+  main .contactSection {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1080px) {
+  main .icons {
+    flex-direction: column;
+  }
+}
+main .contact-form {
+  margin-top: 80px;
+  padding: 10px;
+}
+main .contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+main .contact-form input,
+main .contact-form textarea {
+  min-height: 40px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+}
+main .contact-form input[type=submit] {
+  margin-top: 20px;
+  width: 150px;
+  height: 60px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+}
+main .contact-form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+footer {
+  padding: 20px;
+  margin-left: 300px;
+  margin-top: auto;
+  max-width: 2000px;
+}
+footer .socialMedia {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .socialMedia .iconsTheSame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .socialMedia .iconsTheSame i {
+  color: var(--word-color);
+}
+
+@media (max-width: 1080px) {
+  footer {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1800px) {
+  main {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 2000px) {
+  main {
+    margin-left: 400px;
+  }
+}
+.thanksMessage h2 {
+  margin-left: 300px;
+}/*# sourceMappingURL=style.css.map */
