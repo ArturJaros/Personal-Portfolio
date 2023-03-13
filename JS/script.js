@@ -36,6 +36,15 @@ const dataDescription = document.querySelectorAll('.dataDescription')
 const mailMsg = document.querySelectorAll('.contact-form label')
 const textarea = document.querySelectorAll('.textarea')
 
+//zmiana kolor
+const changeColor = document.querySelector('.changeColor')
+const settings = document.querySelector('.settings')
+const buttonsLeft = document.querySelector('.buttonsLeft')
+const color1 = document.querySelector('.color1')
+const color2 = document.querySelector('.color2')
+const color3 = document.querySelector('.color3')
+const color4 = document.querySelector('.color4')
+
 
 // ---------writing and deleting text---------
 
@@ -195,3 +204,25 @@ if (buttonsCvHireme) {
 if (titleOfSection) {
 	titleOfSection.classList.add('returnOfElements')
 }
+
+//zmiana koloru
+settings.addEventListener('click', () => {
+	settings.classList.toggle('buttonsLeft')
+	dayNight.classList.toggle('buttonsLeft')
+	changeColor.classList.toggle('returnOfElements')
+	
+})
+
+color1.addEventListener('click', () =>
+document.documentElement.style.setProperty('--word-color', '#ff4321')
+)
+color2.addEventListener('click', () =>
+document.documentElement.style.setProperty('--word-color', '#455ca0')
+)
+color3.addEventListener('click', () =>
+document.documentElement.style.setProperty('--word-color', '#b0c223')
+)
+color4.addEventListener('click', () =>
+document.documentElement.style.setProperty('--word-color', '#45a049')
+)
+

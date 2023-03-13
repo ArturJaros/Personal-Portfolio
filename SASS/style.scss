@@ -37,6 +37,85 @@ body {
 	color: #808080;
 	transition: transform 2s, opacity 4s;
 }
+.dayNight {
+	position: fixed;
+	padding: 5px;
+	top: 100px;
+	z-index: 2;
+	right: 30px;
+	font-size: 30px;
+	border-radius: 100%;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	transition: right 1s;
+	i {
+		width: 30px;
+		height: 30px;
+	}
+}
+.settings {
+	position: fixed;
+	padding: 5px;
+	top: 50px;
+	z-index: 2;
+	right: 30px;
+	font-size: 30px;
+	border-radius: 100%;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	transition: right 1s;
+
+	i {
+		width: 30px;
+		height: 30px;
+	}
+}
+.buttonsLeft {
+	right: 230px;
+}
+.changeColor {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	padding: 5px;
+	top: 50px;
+	right: 20px;
+	width: 200px;
+	height: 90px;
+	opacity: 0;
+	transform: translateX(150%);
+	background-color: white;
+	border: 1px solid rgb(243, 231, 231);
+	border-radius: 20px;
+	z-index: 2;
+	transition: transform 1s, opacity 1s;
+
+	.colors {
+		width: 30px;
+		height: 30px;
+		background-color: #808080;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	.colors:hover {
+		transform: scale(1.1);
+	}
+	.color1 {
+		background-color: #ff4321;
+	}
+	.color2 {
+		background-color: #455ca0;
+	}
+	.color3 {
+		background-color: #b0c223;
+	}
+	.color4 {
+		background-color: #45a049;
+	}
+}
 
 // -------------------Appearing elements-------------------
 
@@ -236,23 +315,6 @@ main {
 	@media (max-width: 1080px) {
 		.sectionHome {
 			margin-left: 0;
-		}
-	}
-
-	.dayNight {
-		position: fixed;
-		padding: 5px;
-		top: 100px;
-		z-index: 2;
-		right: 20px;
-		font-size: 30px;
-		border-radius: 100%;
-		border: none;
-		background-color: white;
-		cursor: pointer;
-		i {
-			width: 30px;
-			height: 30px;
 		}
 	}
 
@@ -802,7 +864,7 @@ main {
 	h3 {
 		margin-bottom: 20px;
 	}
-	p{
+	p {
 		color: #808080;
 	}
 	.returtContact {
@@ -814,6 +876,11 @@ main {
 		color: white;
 		border: none;
 		border-radius: 20px;
+		transition: transform 0.4s;
+	}
+	.returtContact:hover {
+		transform: scale(1.1);
+		cursor: pointer;
 	}
 }
 footer {
