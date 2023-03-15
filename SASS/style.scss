@@ -12,7 +12,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	background-color: #eeeef4;
+	background-color: #F0F2F5;
 	font-size: 26px;
 	color: black;
 }
@@ -85,13 +85,12 @@ body {
 	right: 20px;
 	width: 200px;
 	height: 90px;
-	opacity: 0;
 	transform: translateX(150%);
 	background-color: white;
 	border: 1px solid rgb(243, 231, 231);
-	border-radius: 20px;
+	border-radius: 10px;
 	z-index: 2;
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s;
 
 	.colors {
 		width: 30px;
@@ -114,6 +113,94 @@ body {
 	}
 	.color4 {
 		background-color: #45a049;
+	}
+}
+
+// -------------------Cat------------------
+.chatMe {
+	position: fixed;
+	padding: 5px;
+	top: 150px;
+	z-index: 2;
+	right: 30px;
+	font-size: 30px;
+	border-radius: 100%;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	transition: right 1s;
+
+	i {
+		width: 30px;
+		height: 30px;
+	}
+}
+.chat {
+	position: fixed;
+	padding: 5px;
+	right: 30px;
+	width: 350px;
+	height: 450px;
+	bottom: 50px;
+	z-index: 2;
+	border-radius: 30px;
+	transform: translateX(200%);
+	background-color: rgb(230, 224, 224);
+	.answerStyle {
+		padding: 5px;
+		margin-top: 5px;
+		max-width: 70%;
+		border-radius: 30px;
+	}
+	.pStyle {
+		text-align: center;
+		font-size: 16px;
+		color: white;
+		a {
+			text-decoration: none;
+			color: var(--word-color);
+			font-size: 18px;
+			cursor: pointer;
+		}
+	}
+	.askStyle {
+		padding: 5px;
+		margin-bottom: 5px;
+		border-radius: 20px;
+		background-color: #333;
+		cursor: pointer;
+	}
+	.guestAnswerStyle {
+		position: absolute;
+		opacity: 0;
+		margin-left: auto;
+		background-color: rgb(0, 132, 255);
+	}
+	.chatAnswerStyle {
+		position: absolute;
+		left: 200px;
+		opacity: 0;
+		background-color: #333;
+	}
+
+	.firstAsk {
+		background-color: #333;
+	}
+
+	.ask {
+		position: absolute;
+		bottom: 0;
+		max-width: 60%;
+	}
+
+	.hidenAnswer {
+		display: none;
+	}
+
+	.showAnswer {
+		position: static;
+		left: 0;
+		opacity: 1;
 	}
 }
 
@@ -768,7 +855,7 @@ main {
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
-			h3 {
+			.askMe {
 				margin-top: 50px;
 				margin-bottom: 10px;
 				font-family: 'Asul', sans-serif;
@@ -837,17 +924,13 @@ main {
 		margin-top: 20px;
 		width: 150px;
 		height: 60px;
-		background-color: #4caf50;
+		background-color: var(--word-color);
 		color: white;
 		border: none;
 		padding: 10px 20px;
 		text-align: center;
 		font-size: 26px;
 		cursor: pointer;
-	}
-
-	.contact-form input[type='submit']:hover {
-		background-color: #45a049;
 	}
 }
 .thanksMessage {
