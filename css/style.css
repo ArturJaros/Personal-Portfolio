@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #F0F2F5;
+  background-color: #e6ebf3;
   font-size: 26px;
   color: black;
 }
@@ -50,11 +50,15 @@ body {
   border: none;
   background-color: white;
   cursor: pointer;
-  transition: right 1s;
+  transition: right 1s, scale 0.3s;
 }
 .dayNight i {
   width: 30px;
   height: 30px;
+}
+
+.dayNight:hover {
+  scale: 1.1;
 }
 
 .settings {
@@ -68,11 +72,16 @@ body {
   border: none;
   background-color: white;
   cursor: pointer;
-  transition: right 1s;
+  transition: right 1s, scale 0.3s;
 }
 .settings i {
   width: 30px;
   height: 30px;
+  transition: rotate 3s;
+}
+
+.settings:hover {
+  scale: 1.1;
 }
 
 .buttonsLeft {
@@ -130,24 +139,58 @@ body {
   border: none;
   background-color: white;
   cursor: pointer;
-  transition: right 1s;
+  transition: scale 0.3s;
 }
 .chatMe i {
   width: 30px;
   height: 30px;
 }
 
+.chatMe:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 819px) {
+  .chatMe {
+    display: none;
+  }
+}
 .chat {
   position: fixed;
   padding: 5px;
   right: 30px;
   width: 350px;
   height: 450px;
-  bottom: 50px;
+  bottom: 10px;
   z-index: 2;
-  border-radius: 30px;
   transform: translateX(200%);
-  background-color: rgb(230, 224, 224);
+  border-radius: 10px;
+  background-color: #e2e5e9;
+}
+.chat .headerChat {
+  display: flex;
+}
+.chat .headerChat .introduceChatMeChatMe {
+  display: flex;
+}
+.chat .headerChat .introduceChatMeChatMe .imgChat {
+  margin-right: 15px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.chat .headerChat .chatOff {
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: color 0.4s;
+  width: 5px;
+  height: 5px;
+}
+.chat .headerChat .chatOff i {
+  margin-left: 140px;
+}
+.chat .chatOff:hover {
+  color: var(--word-color);
 }
 .chat .answerStyle {
   padding: 5px;
@@ -156,6 +199,7 @@ body {
   border-radius: 30px;
 }
 .chat .pStyle {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
   font-size: 16px;
   color: white;
@@ -170,7 +214,7 @@ body {
   padding: 5px;
   margin-bottom: 5px;
   border-radius: 20px;
-  background-color: #333;
+  background-color: rgb(0, 132, 255);
   cursor: pointer;
 }
 .chat .guestAnswerStyle {
@@ -178,20 +222,49 @@ body {
   opacity: 0;
   margin-left: auto;
   background-color: rgb(0, 132, 255);
+  color: #000;
 }
 .chat .chatAnswerStyle {
   position: absolute;
-  left: 200px;
+  left: 500px;
   opacity: 0;
-  background-color: #333;
+  background-color: rgb(158, 153, 153);
 }
 .chat .firstAsk {
-  background-color: #333;
+  background-color: rgb(158, 153, 153);
 }
 .chat .ask {
   position: absolute;
   bottom: 0;
   max-width: 60%;
+}
+.chat .ask .hrAsk {
+  width: 340px;
+  margin-bottom: 6px;
+}
+.chat .ask .askMeRest {
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 240px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--word-color);
+  cursor: pointer;
+  transition: scale 0.4s;
+}
+.chat .ask .askMeRest p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chat .ask .askMeRest:hover {
+  scale: 1.1;
+}
+.chat .ask .askMeRestLower {
+  margin-top: -85px;
 }
 .chat .hidenAnswer {
   display: none;
@@ -371,7 +444,7 @@ main .sectionHome .allMe .imgMe {
   width: 400px;
   height: 500px;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 50px;
   border-radius: 70px;
   transition: transform 2s, opacity 4s;
 }

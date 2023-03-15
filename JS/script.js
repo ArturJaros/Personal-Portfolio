@@ -62,7 +62,11 @@ const chatAnswer3 = document.querySelector('.chatAnswer3')
 const hidenAnswer = document.querySelector('.hidenAnswer')
 const showAnswer = document.querySelector('.showAnswer')
 const chatMe = document.querySelector('.chatMe')
+const faCommentDots = document.querySelector('.chatMe .fa-comment-dots')
 const chat = document.querySelector('.chat')
+const chatOff = document.querySelector('.chatOff')
+const askMeRest = document.querySelector('.askMeRest')
+const introduceChatMeChatMe = document.querySelector('.introduceChatMeChatMe p')
 
 // ---------writing and deleting text---------
 
@@ -98,9 +102,9 @@ const darkColor = 'black'
 const grayColor = 'Gainsboro'
 const mutedTextColor = '#808080'
 const lightColor = 'white'
-const lightBgColor = '#eeeef4'
+const lightBgColor = '#e2e5e9'
 const darkBgColor = '#1e1c1c'
-const lightNavBgColor = '#e9edf4'
+const lightNavBgColor = '#e2e5e9'
 const darkGrayColor = '#2b2929'
 const lightIcon = 'fa-solid fa-moon'
 const darkIcon = 'fa-solid fa-sun'
@@ -113,9 +117,14 @@ function allchanges() {
 	}
 	dayNight.style.backgroundColor = dark ? darkBtnBgColor : lightColor
 	settings.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+	chatMe.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+	chat.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+	introduceChatMeChatMe.style.color = dark ? grayColor : darkColor
+	chatOff.style.color = dark ? grayColor : darkColor
+	faGear.style.color = dark ? grayColor : darkColor
+	faCommentDots.style.color = dark ? grayColor : darkColor
 	changeColor.style.backgroundColor = dark ? darkBtnBgColor : lightColor
 	changeColor.style.borderColor = dark ? darkColor : lightColor
-	faGear.style.color = dark ? grayColor : darkColor
 	moonSun.className = dark ? darkIcon : lightIcon
 	dayNight.style.color = dark ? grayColor : darkColor
 	if (imgMe) {
@@ -228,6 +237,7 @@ if (titleOfSection) {
 }
 
 //zmiana koloru
+
 settings.addEventListener('click', () => {
 	settings.classList.toggle('buttonsLeft')
 	dayNight.classList.toggle('buttonsLeft')
@@ -240,90 +250,103 @@ color3.addEventListener('click', () => document.documentElement.style.setPropert
 color4.addEventListener('click', () => document.documentElement.style.setProperty('--word-color', '#45a049'))
 
 //chat
-function handleAskMe1() {
-	askMe2.classList.remove('hidenAnswer')
-	askMe2.classList.add('showAnswer')
-	guestAnswer2.classList.remove('showAnswer')
-	chatAnswer2.classList.remove('showAnswer')
+function addAskMe1() {
 	askMe1.classList.add('hidenAnswer')
 	guestAnswer.classList.add('showAnswer')
 	chatAnswer.forEach(e => e.classList.add('showAnswer'))
 }
-function handleAskMe2() {
-	askMe1.classList.remove('hidenAnswer')
-	askMe1.classList.add('showAnswer')
-	chatAnswer.forEach(e => e.classList.remove('showAnswer'))
-	guestAnswer.classList.remove('showAnswer')
+function addAskMe2() {
 	askMe2.classList.add('hidenAnswer')
 	guestAnswer2.classList.add('showAnswer')
 	chatAnswer2.classList.add('showAnswer')
 }
+function addAskMe3() {
+	askMe3.classList.add('hidenAnswer')
+	guestAnswer3.classList.add('showAnswer')
+	chatAnswer3.classList.add('showAnswer')
+}
+function removeAskMe1() {
+	askMe1.classList.remove('hidenAnswer')
+	askMe1.classList.add('showAnswer')
+	chatAnswer.forEach(e => e.classList.remove('showAnswer'))
+	guestAnswer.classList.remove('showAnswer')
+}
+function removeAskMe2() {
+	askMe2.classList.remove('hidenAnswer')
+	askMe2.classList.add('showAnswer')
+	chatAnswer2.classList.remove('showAnswer')
+	guestAnswer2.classList.remove('showAnswer')
+}
+function removeAskMe3() {
+	askMe3.classList.remove('hidenAnswer')
+	askMe3.classList.add('showAnswer')
+	guestAnswer3.classList.remove('showAnswer')
+	chatAnswer3.classList.remove('showAnswer')
+}
 
 function handleAskMe1Click() {
 	if (guestAnswer2.classList.contains('showAnswer')) {
-		handleAskMe1()
+		removeAskMe2()
+		addAskMe1()
 	}
 	if (guestAnswer3.classList.contains('showAnswer')) {
-		askMe3.classList.remove('hidenAnswer')
-		askMe3.classList.add('showAnswer')
-		chatAnswer3.classList.remove('showAnswer')
-		guestAnswer3.classList.remove('showAnswer')
-		askMe1.classList.add('hidenAnswer')
-		guestAnswer.classList.add('showAnswer')
-		chatAnswer.forEach(e => e.classList.add('showAnswer'))
+		removeAskMe3()
+		addAskMe1()
 	} else {
-		askMe1.classList.add('hidenAnswer')
-		guestAnswer.classList.add('showAnswer')
-		chatAnswer.forEach(e => e.classList.add('showAnswer'))
+		addAskMe1()
 	}
 }
-
 function handleAskMe2Click() {
 	if (guestAnswer.classList.contains('showAnswer')) {
-		handleAskMe2()
+		removeAskMe1()
+		addAskMe2()
 	}
 	if (guestAnswer3.classList.contains('showAnswer')) {
-		askMe3.classList.remove('hidenAnswer')
-		askMe3.classList.add('showAnswer')
-		chatAnswer3.classList.remove('showAnswer')
-		guestAnswer3.classList.remove('showAnswer')
-		askMe2.classList.add('hidenAnswer')
-		guestAnswer2.classList.add('showAnswer')
-		chatAnswer2.classList.add('showAnswer')
+		removeAskMe3()
+		addAskMe2()
 	} else {
-		askMe2.classList.add('hidenAnswer')
-		guestAnswer2.classList.add('showAnswer')
-		chatAnswer2.classList.add('showAnswer')
+		addAskMe2()
 	}
 }
 function handleAskMe3Click() {
 	if (guestAnswer2.classList.contains('showAnswer')) {
-		askMe2.classList.remove('hidenAnswer')
-		askMe2.classList.add('showAnswer')
-		guestAnswer2.classList.remove('showAnswer')
-		chatAnswer2.classList.remove('showAnswer')
-		askMe3.classList.add('hidenAnswer')
-		guestAnswer3.classList.add('showAnswer')
-		chatAnswer3.classList.add('showAnswer')
+		removeAskMe2()
+		addAskMe3()
 	}
 	if (guestAnswer.classList.contains('showAnswer')) {
-		askMe1.classList.remove('hidenAnswer')
-		askMe1.classList.add('showAnswer')
-		chatAnswer.forEach(e => e.classList.remove('showAnswer'))
-		guestAnswer.classList.remove('showAnswer')
-		askMe3.classList.add('hidenAnswer')
-		guestAnswer3.classList.add('showAnswer')
-		chatAnswer3.classList.add('showAnswer')
+		removeAskMe1()
+		addAskMe3()
 	} else {
-		askMe3.classList.add('hidenAnswer')
-		guestAnswer3.classList.add('showAnswer')
-		chatAnswer3.classList.add('showAnswer')
+		addAskMe3()
 	}
+}
+function restAllButton() {
+	removeAskMe1()
+	removeAskMe2()
+	removeAskMe3()
 }
 
 chatMe.addEventListener('click', () => {
+	restAllButton()
 	chat.classList.toggle('returnOfElements')
+	askMeRest.classList.remove('askMeRestLower')
 })
-askMe1.addEventListener('click', handleAskMe1Click)
-askMe2.addEventListener('click', handleAskMe2Click)
-askMe3.addEventListener('click', handleAskMe3Click)
+chatOff.addEventListener('click', () => {
+	chat.classList.remove('returnOfElements')
+})
+askMe1.addEventListener('click', () => {
+	handleAskMe1Click()
+	askMeRest.classList.add('askMeRestLower')
+})
+askMe2.addEventListener('click', () => {
+	handleAskMe2Click()
+	askMeRest.classList.add('askMeRestLower')
+})
+askMe3.addEventListener('click', () => {
+	handleAskMe3Click()
+	askMeRest.classList.add('askMeRestLower')
+})
+askMeRest.addEventListener('click', () => {
+	restAllButton()
+	askMeRest.classList.remove('askMeRestLower')
+})
