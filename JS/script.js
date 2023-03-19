@@ -147,21 +147,21 @@ function allchanges() {
 	body.style.backgroundColor = dark ? darkBgColor : lightBgColor
 }
 
-function dayNightFunction() {
-	let savedDark = localStorage.getItem('dark')
-	dark = savedDark === 'true'
-	allchanges()
+// function dayNightFunction() {
+// 	let savedDark = localStorage.getItem('dark')
+// 	dark = savedDark === 'true'
+// 	allchanges()
 
-	dayNight.addEventListener('click', function () {
-		body.classList.toggle('dark')
-		dark = body.classList.contains('dark')
-		allchanges()
+// 	dayNight.addEventListener('click', function () {
+// 		body.classList.toggle('dark')
+// 		dark = body.classList.contains('dark')
+// 		allchanges()
 
-		localStorage.setItem('dark', dark.toString())
-	})
-}
+// 		localStorage.setItem('dark', dark.toString())
+// 	})
+// }
 
-dayNightFunction()
+// dayNightFunction()
 
 // ---------retractable navigation---------
 
