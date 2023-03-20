@@ -27,7 +27,7 @@ body {
   transition: transform 2s;
 }
 .introducingYourself span {
-  font-size: 32px;
+  font-size: 34px;
   font-family: "Julee", cursive;
   color: var(--word-color);
 }
@@ -419,6 +419,7 @@ main {
   max-width: 1400px;
 }
 main .sectionHome {
+  padding: 5px;
   margin-left: 300px;
 }
 main .sectionHome .allMe {

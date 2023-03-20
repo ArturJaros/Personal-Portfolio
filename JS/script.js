@@ -70,7 +70,7 @@ const introduceChatMeChatMe = document.querySelector('.introduceChatMeChatMe p')
 
 // ---------writing and deleting text---------
 
-const phrase = 'Web Developer'
+const phrase = 'Artur Jarosz'
 let j = 0
 let currentPhrase = ''
 let isDeleting = false
@@ -201,40 +201,7 @@ mediaQuery.addEventListener('change', () => {
 	}
 })
 
-// ---------Moving elements---------
-if (imgMe) {
-	const movingElementsHome = () => {
-		mainText.classList.add('returnOfElements')
-		introducingYourself.classList.add('returnOfElements')
-		textHome.classList.add('returnOfElements')
-		imgMe.classList.add('returnOfElements')
-		moreAboutMe.classList.add('returnOfElements')
-	}
-	movingElementsHome()
-}
-if (buttonsCvHireme) {
-	const movingElementsAboutMe = () => {
-		mainText.classList.add('returnOfElements')
-		introducingYourself.classList.add('returnOfElements')
-		titleOfSection.classList.add('returnOfElements')
-		leftUlData.classList.add('returnOfElements')
-		rightUlData.classList.add('returnOfElements')
-		buttonsCvHireme.classList.add('returnOfElements')
-		circle.forEach(circle => {
-			circle.classList.add('returnOfElements')
-		})
-	}
-	movingElementsAboutMe()
-	window.addEventListener('scroll', () => {
-		if (window.pageYOffset > 600) {
-			aboutMyLife.style.transform = 'scale(1)'
-			aboutMyLife.style.opacity = '1'
-		}
-	})
-}
-if (titleOfSection) {
-	titleOfSection.classList.add('returnOfElements')
-}
+
 
 //zmiana koloru
 
