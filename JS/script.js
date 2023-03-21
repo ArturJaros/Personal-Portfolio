@@ -2,7 +2,7 @@ const dayNight = document.querySelector('.dayNight')
 const body = document.querySelector('body')
 const allNav = document.querySelector('.allNav')
 const textElements = document.querySelectorAll(
-	'.allNav, h1, h2, .introducingYourself,.myStoryDescription,  .border, .navLinks, .socialName '
+	'h1, h2, .introducingYourself,.myStoryDescription,  .border, .navLinks, .socialName '
 )
 const mainText = document.querySelector('.mainText')
 const moreAboutMe = document.querySelector('.moreAboutMe')
@@ -67,6 +67,15 @@ const chat = document.querySelector('.chat')
 const chatOff = document.querySelector('.chatOff')
 const askMeRest = document.querySelector('.askMeRest')
 const introduceChatMeChatMe = document.querySelector('.introduceChatMeChatMe p')
+const colorNr1 = document.querySelector('.colorNr1')
+const colorNr2 = document.querySelector('.colorNr2')
+const colorNr3 = document.querySelector('.colorNr3')
+const colorNr4 = document.querySelector('.colorNr4')
+const colorNr5 = document.querySelector('.colorNr5')
+const colorNr6 = document.querySelector('.colorNr6')
+const colorNr7 = document.querySelector('.colorNr7')
+const colorNr8 = document.querySelector('.colorNr8')
+const colorNr9 = document.querySelector('.colorNr9')
 
 // ---------writing and deleting text---------
 
@@ -98,53 +107,48 @@ if (typewritter) {
 
 let dark = false
 
-const darkColor = 'black'
-const grayColor = 'Gainsboro'
-const mutedTextColor = '#808080'
-const lightColor = 'white'
-const lightBgColor = '#e2e5e9'
+
 const darkBgColor = '#1e1c1c'
-const lightNavBgColor = '#e2e5e9'
-const darkGrayColor = '#2b2929'
-const lightIcon = 'fa-solid fa-moon'
+const lightBgColor = '#e2e5e9'
 const darkIcon = 'fa-solid fa-sun'
-const darkBtnBgColor = '#2c2a2a'
+const lightIcon = 'fa-solid fa-moon'
 
 function allchanges() {
-	allNav.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+	allNav.classList.toggle('colorNr1')
 	if (mainText) {
-		mainText.style.color = dark ? grayColor : mutedTextColor
+		mainText.classList.toggle('colorNr2')
 	}
-	dayNight.style.backgroundColor = dark ? darkBtnBgColor : lightColor
-	settings.style.backgroundColor = dark ? darkBtnBgColor : lightColor
-	chatMe.style.backgroundColor = dark ? darkBtnBgColor : lightColor
-	chat.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
-	introduceChatMeChatMe.style.color = dark ? grayColor : darkColor
-	chatOff.style.color = dark ? grayColor : darkColor
-	faGear.style.color = dark ? grayColor : darkColor
-	faCommentDots.style.color = dark ? grayColor : darkColor
-	changeColor.style.backgroundColor = dark ? darkBtnBgColor : lightColor
-	changeColor.style.borderColor = dark ? darkColor : lightColor
+	dayNight.classList.toggle('colorNr2')
+	dayNight.classList.toggle('colorNr5')
+	settings.classList.toggle('colorNr5')
+	chatMe.classList.toggle('colorNr5')
+	chat.classList.toggle('colorNr1')
+	introduceChatMeChatMe.classList.toggle('colorNr2')
+	chatOff.classList.toggle('colorNr2')
+	faGear.classList.toggle('colorNr2')
+	faCommentDots.classList.toggle('colorNr2')
+	changeColor.classList.toggle('colorNr5')
+	changeColor.classList.toggle('colorNr6')
 	moonSun.className = dark ? darkIcon : lightIcon
-	dayNight.style.color = dark ? grayColor : darkColor
 	if (imgMe) {
-		imgMe.style.filter = dark ? 'brightness(70%)' : ''
+		imgMe.style.filter = dark ? '' : 'brightness(70%)'
 	} else if (theSameEduExp) {
-		theSameEduExp.forEach(eduExp => (eduExp.style.backgroundColor = dark ? darkGrayColor : lightColor))
+		theSameEduExp.forEach(eduExp => eduExp.classList.toggle('colorNr1'))
 	}
-	firstPart.forEach(e => (e.style.color = dark ? grayColor : mutedTextColor))
-	dataDescription.forEach(e => (e.style.color = dark ? grayColor : darkColor))
-	textarea.forEach(e => (e.style.backgroundColor = dark ? grayColor : lightColor))
-	mailMsg.forEach(e => (e.style.color = dark ? grayColor : darkColor))
-	skillsName.forEach(skill => (skill.style.color = dark ? grayColor : darkColor))
-	liMyData.forEach(li => (li.style.color = dark ? lightColor : darkColor))
-	ulMyData.forEach(ul => (ul.style.color = dark ? grayColor : mutedTextColor))
-	nameOfDescription.forEach(name => (name.style.color = dark ? lightColor : darkColor))
-	liDescription.forEach(li => (li.style.color = dark ? grayColor : darkColor))
-	faCalendarDays.forEach(day => (day.style.color = dark ? mutedTextColor : darkColor))
-	textElements.forEach(text => (text.style.color = dark ? lightColor : darkColor))
 
-	body.style.backgroundColor = dark ? darkBgColor : lightBgColor
+	firstPart.forEach(e => e.classList.toggle('colorNr1'))
+	dataDescription.forEach(e => e.classList.toggle('colorNr2'))
+	textarea.forEach(e => e.classList.toggle('colorNr3'))
+	mailMsg.forEach(e => e.classList.toggle('colorNr2'))
+	skillsName.forEach(e => e.classList.toggle('colorNr2'))
+	liMyData.forEach(e => e.classList.toggle('colorNr7'))
+	ulMyData.forEach(e => e.classList.toggle('colorNr2'))
+	nameOfDescription.forEach(e => e.classList.toggle('colorNr7'))
+	liDescription.forEach(e => e.classList.toggle('colorNr2'))
+	faCalendarDays.forEach(e => e.classList.toggle('colorNr8'))
+	textElements.forEach(e => e.classList.toggle('colorNr7'))
+
+	body.classList.toggle('colorNr9')
 }
 
 function dayNightFunction() {
@@ -162,6 +166,71 @@ function dayNightFunction() {
 }
 
 dayNightFunction()
+
+// const darkColor = 'black'
+// const grayColor = 'Gainsboro'
+// const mutedTextColor = '#808080'
+// const lightColor = 'white'
+// const lightBgColor = '#e2e5e9'
+// const darkBgColor = '#1e1c1c'
+// const lightNavBgColor = '#e2e5e9'
+// const darkGrayColor = '#2b2929'
+// const lightIcon = 'fa-solid fa-moon'
+// const darkIcon = 'fa-solid fa-sun'
+// const darkBtnBgColor = '#2c2a2a'
+
+// function allchanges() {
+// 	allNav.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+// 	if (mainText) {
+// 		mainText.style.color = dark ? grayColor : mutedTextColor
+// 	}
+// 	dayNight.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+// 	settings.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+// 	chatMe.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+// 	chat.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+// 	introduceChatMeChatMe.style.color = dark ? grayColor : darkColor
+// 	chatOff.style.color = dark ? grayColor : darkColor
+// 	faGear.style.color = dark ? grayColor : darkColor
+// 	faCommentDots.style.color = dark ? grayColor : darkColor
+// 	changeColor.style.backgroundColor = dark ? darkBtnBgColor : lightColor
+// 	changeColor.style.borderColor = dark ? darkColor : lightColor
+// 	moonSun.className = dark ? darkIcon : lightIcon
+// 	dayNight.style.color = dark ? grayColor : darkColor
+// 	if (imgMe) {
+// 		imgMe.style.filter = dark ? 'brightness(70%)' : ''
+// 	} else if (theSameEduExp) {
+// 		theSameEduExp.forEach(eduExp => (eduExp.style.backgroundColor = dark ? darkGrayColor : lightColor))
+// 	}
+// 	firstPart.forEach(e => (e.style.color = dark ? grayColor : mutedTextColor))
+// 	dataDescription.forEach(e => (e.style.color = dark ? grayColor : darkColor))
+// 	textarea.forEach(e => (e.style.backgroundColor = dark ? grayColor : lightColor))
+// 	mailMsg.forEach(e => (e.style.color = dark ? grayColor : darkColor))
+// 	skillsName.forEach(skill => (skill.style.color = dark ? grayColor : darkColor))
+// 	liMyData.forEach(li => (li.style.color = dark ? lightColor : darkColor))
+// 	ulMyData.forEach(ul => (ul.style.color = dark ? grayColor : mutedTextColor))
+// 	nameOfDescription.forEach(name => (name.style.color = dark ? lightColor : darkColor))
+// 	liDescription.forEach(li => (li.style.color = dark ? grayColor : darkColor))
+// 	faCalendarDays.forEach(day => (day.style.color = dark ? mutedTextColor : darkColor))
+// 	textElements.forEach(text => (text.style.color = dark ? lightColor : darkColor))
+
+// 	body.style.backgroundColor = dark ? darkBgColor : lightBgColor
+// }
+
+// function dayNightFunction() {
+// 	let savedDark = localStorage.getItem('dark')
+// 	dark = savedDark === 'true'
+// 	allchanges()
+
+// 	dayNight.addEventListener('click', function () {
+// 		body.classList.toggle('dark')
+// 		dark = body.classList.contains('dark')
+// 		allchanges()
+
+// 		localStorage.setItem('dark', dark.toString())
+// 	})
+// }
+
+// dayNightFunction()
 
 // ---------retractable navigation---------
 
@@ -200,8 +269,6 @@ mediaQuery.addEventListener('change', () => {
 		line3.classList.remove('xBtn3')
 	}
 })
-
-
 
 //zmiana koloru
 
