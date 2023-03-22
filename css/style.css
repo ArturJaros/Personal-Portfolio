@@ -134,42 +134,6 @@ body {
   background-color: #45a049;
 }
 
-.colorNr1 {
-  background-color: #2b2929 !important;
-}
-
-.colorNr2 {
-  color: Gainsboro;
-}
-
-.colorNr3 {
-  background-color: Gainsboro !important;
-}
-
-.colorNr4 {
-  background-color: #1e1c1c !important;
-}
-
-.colorNr5 {
-  background-color: #2c2a2a !important;
-}
-
-.colorNr6 {
-  border-color: black !important;
-}
-
-.colorNr7 {
-  color: white !important;
-}
-
-.colorNr8 {
-  color: #808080 !important;
-}
-
-.colorNr9 {
-  background-color: black !important;
-}
-
 .chatMe {
   position: fixed;
   padding: 5px;
@@ -427,6 +391,7 @@ body {
   list-style: none;
 }
 .nameOfWeb .navClass ul .border {
+  height: 70px;
   border-bottom: 2px solid black;
   border-bottom-color: rgba(0, 0, 0, 0.05);
 }
