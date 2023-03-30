@@ -1,6 +1,5 @@
-<!-- Zmiana koloru czcionki przed użytkownika strony
-Zmiana koloru tła z jasnego na ciemny
-Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięcięcia, które będą dawały spreczową odpowiedź w formie czastu  -->
+<!DOCTYPE html>
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +8,7 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
     <title>Code Journey Man</title>
     <script src="https://kit.fontawesome.com/7342c878f4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 
@@ -25,7 +18,6 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
 <body>
 
     <header class="nameOfWeb" id="title">
-
         <button class="burgerMenu">
             <div class="burgerBtn">
                 <div class="line1 line"></div>
@@ -39,15 +31,15 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
             </div>
             <nav class="navClass" id="navId">
                 <ul>
-                    <li class="border"><i class="fa-solid fa-house"></i><a class="navLinks" href="home.html">Home</a>
+                    <li class="border"><i class="fa-solid fa-house"></i><a class="navLinks" href="./home.html">Home</a>
                     </li>
-                    <li class="border"><i class="fa-solid fa-user"></i><a class="navLinks" href="aboutMe.html">O
+                    <li class="border"><i class="fa-solid fa-user"></i><a class="navLinks" href="./aboutMe.html">O
                             mnie</a>
                     </li>
                     <li class="border"><i class="fa-solid fa-heart"></i><a class="navLinks" href="hobby.html">Hobby</a>
                     </li>
                     <!-- <li class="border"><i class="fa-solid fa-briefcase"></i><a class="navLinks"
-                            href="portfolio.html">Portfolio</a></li> -->
+                        href="portfolio.html">Portfolio</a></li> -->
                     <li class="border"><i class="fa-solid fa-comments"></i><a class="navLinks"
                             href="contact.html">Kontakt</a>
                     </li>
@@ -61,21 +53,19 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
         <section class="sectionHome" id="home.html">
             <div class="allMe">
                 <div class="textHome">
-                    <h2 class="hideElementsTop">Witaj na <span>Mojej</span> stronie!</h2>
-                    <h3 class=" introducingYourself hideElementsTop">Jestem <span class="typewritter"></span> </h3>
-                    <p class="mainText hideElementsLeft"> Jestem studentem informatyki na wrocławskiej uczelni.
-                        Specjalizuję się w tworzeniu frontendu do stron internetowych. Znam języki JavaScript, HTML,
-                        CSS.</p>
+                    <h2>Witaj na <span>Mojej</span> stronie!</h2>
+                    <h3 class=" introducingYourself">Nazywam się <span class="typewritter"></span> </h3>
+                    <p class="mainText">Cieszę się, że odwiedziłeś moją stronę! Aby bliżej mnie poznać przejdź do sekcji
+                        o mnie lub kliknij przycisk poniżej. </p>
                 </div>
                 <!-- photo to change resolution  -->
-                <img class="imgMe hideElementsRight" src="../image/Plener Martyna i Artur (22 of 42).jpg"
-                    alt="Mężczyzna w garniturze">
+                <img class="imgMe" src="../image/Plener Martyna i Artur (22 of 42).jpg" alt="Mężczyzna w garniturze">
 
             </div>
 
 
 
-            <a href="aboutMe.html"><button class="moreAboutMe hideElementsLeft">Więcej o mnie
+            <a href="aboutMe.html"><button class="moreAboutMe ">Więcej o mnie
                 </button></a>
         </section>
         <section class="buttons">
@@ -83,17 +73,16 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
             <button class="dayNight" aria-label="Przełącz tryb nocny"><i class="fa-solid fa-moon"></i></button>
             <button class="settings" aria-label="Zmiana koloru"><i class="fa-solid fa-gear"></i></button>
             <div class="changeColor">
-                <div class="colors color1" aria-label="Wybierz kolor 1"></div>
-                <div class="colors color2" aria-label="Wybierz kolor 2"></div>
-                <div class="colors color3" aria-label="Wybierz kolor 3"></div>
-                <div class="colors color4" aria-label="Wybierz kolor 4"></div>
+                <button class="colors color1" aria-label="Wybierz kolor 1"></button>
+                <button class="colors color2" aria-label="Wybierz kolor 2"></button>
+                <button class="colors color3" aria-label="Wybierz kolor 3"></button>
+                <button class="colors color4" aria-label="Wybierz kolor 4"></button>
             </div>
             <button class="chatMe" aria-label="Rozpocznij czat"><i class="fa-solid fa-comment-dots"></i></button>
             <div class="chat">
                 <div class="headerChat">
                     <div class="introduceChatMeChatMe">
-                        <img class="imgChat" src="../image/Zdjęcie do chatu.jpg"
-                            alt="Mężczyzna w garniturze">
+                        <img class="imgChat" src="../image/Zdjęcie do chatu.jpg" alt="Mężczyzna w garniturze">
                         <p>Artur Jarosz</p>
                     </div>
 
@@ -107,22 +96,22 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
                     <p class="pStyle">Chciałbym dowiedzieć się wiecej o Tobie. </p>
                 </div>
                 <div class="chatAnswer answerStyle chatAnswerStyle ">
-                    <p class="pStyle">Nie ma sprawy! Aby dowiedzieć się więcej o mnie przejdź prosze do Sekcji <span><a
+                    <p class="pStyle">Nie ma sprawy! Aby dowiedzieć się więcej o mnie przejdź prosze do sekcji <span><a
                                 href="aboutMe.html">O mnie</a></span> . Tam znajdziesz więcej informacji. Jeśli to wciąż
-                        będzie za mało w sekjci <span><a href="hobby.html">Hobby</a></span> możesz poznać moją historię
-                        dokładniej ;)</p>
+                        będzie za mało w sekcji <span><a href="hobby.html">Hobby</a></span> możesz poznać moją historię
+                        dokładniej :)</p>
                 </div>
 
                 <div class="chatAnswer answerStyle chatAnswerStyle ">
-                    <p class="pStyle">Czy mogę w czymś jeszcze pomóc? </p>
+                    <p class="pStyle">Czy mogę jeszcze w czymś pomóc? </p>
                 </div>
                 <div class="guestAnswer2 answerStyle guestAnswerStyle">
-                    <p class="pStyle">Musimy razem pracowwać!</p>
+                    <p class="pStyle">Musimy razem pracować!</p>
                 </div>
                 <div class="chatAnswer2 answerStyle chatAnswerStyle ">
                     <p class="pStyle">Świetna decyzja! Przejdź proszę do sekcji <span><a
                                 href="contact.html">Kontakt</a></span> gdzie będziesz mógł mi wysłać maila lub
-                        znjadziesz
+                        znajdziesz
                         numer aby do mnie zadzwonić.
                     </p>
                 </div>
@@ -131,7 +120,7 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
                 </div>
                 <div class="chatAnswer3 answerStyle chatAnswerStyle ">
                     <p class="pStyle">Dokładnie tak. Kod nie był przepisywany z żadnych kursów. Jedynie inspiracje co do
-                        kwesti wizualnej zostały zaczerpnięte z internetu. Jeśli chcesz sprawdzić jak mi szło podaje
+                        kwesti wizualnej zostały zaczerpnięte z internetu. Jeśli chcesz sprawdzić moje postępy podaję
                         link do
                         <span><a href="https://github.com/ArturJaros/Personal-Portfolio">GitHuba</a></span>.
                     </p>
@@ -157,33 +146,10 @@ Chat dla odwiedzającego stronę, w którym będą podane komendy do wciśnięci
             </div>
         </section>
     </main>
-    <footer>
-        <div class="socialMedia">
-            <div class="facebookIcone iconsTheSame">
-                <a href="https://www.facebook.com/artur.jarosz.5/" target="_blank"
-                    aria-label="Link do strony na Facebooku Artura Jarosza">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <p class="socialName">Facebook</p>
-            </div>
-            <div class="linkedinIcone iconsTheSame">
-                <a href="https://www.linkedin.com/signup" target="_blank" aria-label="Link do strony LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <p class="socialName">LinkedIn</p>
-            </div>
-            <div class="githubIcone iconsTheSame">
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Link do strony na Instagramie">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <p class="socialName">Instagram</p>
-            </div>
-        </div>
-    </footer>
+
 
 
     <script src="../JS/script.js"></script>
-    <script src="../JS/index.js"></script>
 </body>
 
 </html>

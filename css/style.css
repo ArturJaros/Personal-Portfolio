@@ -6,12 +6,6 @@
 
 :root {
   --word-color: #ff4321;
-  --color-dark: black;
-  --color-gray: Gainsboro;
-  --color-light: white;
-  --color-dark-bg: #1e1c1c;
-  --color-dark-gray: #2b2929;
-  --color-dark-btn-bg: #2c2a2a;
 }
 
 body {
@@ -22,27 +16,24 @@ body {
   background-color: #e6ebf3;
   font-size: 26px;
   color: black;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .introducingYourself {
   height: 52px;
   margin-top: 20px;
-  font-size: 40px;
-  font-family: "Asul", sans-serif;
-  transform: translateY(-700%);
-  transition: transform 2s;
+  font-size: 42px;
 }
 .introducingYourself span {
-  font-size: 34px;
+  font-size: 37px;
   font-family: "Julee", cursive;
   color: var(--word-color);
 }
 
 .mainText {
-  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
   margin-top: 50px;
   color: #808080;
-  transition: transform 2s, opacity 4s;
 }
 
 .dayNight {
@@ -114,6 +105,7 @@ body {
 .changeColor .colors {
   width: 30px;
   height: 30px;
+  border: none;
   background-color: #808080;
   border-radius: 50%;
   cursor: pointer;
@@ -131,7 +123,7 @@ body {
   background-color: #b0c223;
 }
 .changeColor .color4 {
-  background-color: #45a049;
+  background-color: #ea00d6;
 }
 
 .chatMe {
@@ -205,7 +197,6 @@ body {
   border-radius: 30px;
 }
 .chat .pStyle {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
   font-size: 16px;
   color: white;
@@ -281,21 +272,6 @@ body {
   opacity: 1;
 }
 
-.hideElementsRight {
-  opacity: 0;
-  transform: translateX(300%);
-}
-
-.hideElementsLeft {
-  opacity: 0;
-  transform: translateX(-300%);
-}
-
-.hideElementsTop {
-  opacity: 0;
-  transform: translatey(-700%);
-}
-
 .returnOfElements {
   opacity: 1;
   transform: translateX(0);
@@ -304,7 +280,7 @@ body {
 
 .nameOfWeb {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 .nameOfWeb .burgerMenu {
   display: none;
@@ -360,11 +336,7 @@ body {
   border-right: 2px solid black;
   border-right-color: rgba(0, 0, 0, 0.04);
 }
-.nameOfWeb .allNav .navLinks {
-  font-family: "Asul", sans-serif;
-}
 .nameOfWeb h1 {
-  font-family: "Asul", sans-serif;
   font-size: 30px;
   margin-top: 50px;
   margin-left: 10px;
@@ -373,14 +345,6 @@ body {
   font-size: 40px;
   font-family: "Caveat", cursive;
   color: var(--word-color);
-}
-.nameOfWeb .fa-bars {
-  font-size: 2rem;
-  color: #333;
-}
-.nameOfWeb .fa-x {
-  font-size: 2rem;
-  color: #333;
 }
 .nameOfWeb .navClass {
   padding: 20px;
@@ -397,9 +361,11 @@ body {
 }
 .nameOfWeb .navClass ul .border .navLinks {
   display: inline-block;
+  font-weight: bold;
+  font-size: 22px;
   color: black;
   text-decoration: none;
-  font-size: 22px;
+  font-family: "Source Sans Pro", sans-serif;
   transition: color 0.4s, transform 0.4s;
 }
 .nameOfWeb .navClass ul .border .navLinks:hover {
@@ -436,17 +402,19 @@ main .sectionHome .allMe {
   flex-direction: row;
 }
 main .sectionHome .allMe .textHome {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   margin-left: 30px;
 }
 main .sectionHome .allMe .textHome h2 {
   font-size: 42px;
-  font-family: "Asul" cursive;
-  transition: transform 2s;
+  font-weight: bold;
 }
 main .sectionHome .allMe .textHome h2 span {
   font-family: "Julee", cursive;
   color: var(--word-color);
+}
+main .sectionHome .allMe .textHome .mainText {
+  margin-top: 100px;
 }
 main .sectionHome .allMe .imgMe {
   width: 400px;
@@ -454,7 +422,6 @@ main .sectionHome .allMe .imgMe {
   padding: 20px;
   margin-top: 50px;
   border-radius: 70px;
-  transition: transform 2s, opacity 4s;
 }
 @media (min-width: 1250px) {
   main .sectionHome .allMe .imgMe {
@@ -482,13 +449,11 @@ main .moreAboutMe {
   background-color: var(--word-color);
   color: #eeeef4;
   cursor: pointer;
-  transition: transform 2s 0.5s, opacity 3s 0.5s;
 }
 main .titleOfSection {
   position: absolute;
   top: 50px;
   font-size: 36px;
-  transition: transform 2s;
 }
 main .titleOfSection .longLine {
   height: 5px;
@@ -515,12 +480,6 @@ main .allAboutMe .myData {
   flex-direction: row;
   margin-top: 80px;
 }
-main .allAboutMe .myData .leftUlData {
-  transition: transform 2s 1s, opacity 4s 1s;
-}
-main .allAboutMe .myData .rightUlData {
-  transition: transform 2s 1s, opacity 4s 1s;
-}
 main .allAboutMe .myData ul {
   margin-right: 20px;
   font-size: 20px;
@@ -532,10 +491,8 @@ main .allAboutMe .myData ul li {
   border-bottom: 2px solid black;
   border-bottom-color: rgba(0, 0, 0, 0.05);
   padding-bottom: 8px;
-  font-family: "Roboto", sans-serif;
 }
 main .allAboutMe .myData ul li span {
-  font-family: "Asul", sans-serif;
   font-weight: bold;
   color: black;
 }
@@ -577,8 +534,8 @@ main .allAboutMe .myData .circle .progress {
   height: 100%;
   border-radius: 50%;
   stroke-dashoffset: 190;
-  -webkit-animation: progress 3s 3s linear forwards;
-          animation: progress 3s 3s linear forwards;
+  -webkit-animation: progress 3s linear forwards;
+          animation: progress 3s linear forwards;
 }
 main .allAboutMe .myData .circle .progressHtml {
   stroke-dasharray: 480;
@@ -610,7 +567,7 @@ main .allAboutMe .myData .circle .skillsName {
   font-weight: 600;
 }
 @media (max-width: 1230px) {
-  main .allAboutMe .circle {
+  main .allAboutMe .myData .circle {
     display: none;
   }
 }
@@ -652,6 +609,7 @@ main .allAboutMe .aboutMyLife {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 250px;
+  font-family: "Source Sans Pro";
   transform: scale(0.1);
   opacity: 0.1;
   transition: transform 2s, opacity 4s;
@@ -681,7 +639,7 @@ main .allAboutMe .aboutMyLife .description .date i {
 main .allAboutMe .aboutMyLife .pseudoClass {
   margin-top: 115px;
   height: 840px;
-  width: 3px;
+  width: 2px;
   margin-left: 20px;
   background-color: var(--word-color);
   position: relative;
@@ -720,16 +678,16 @@ main .allAboutMe .aboutMyLife .pseudoClass::before {
   transform: translate(-50%, -50%);
 }
 main .allAboutMe .aboutMyLife .pseudoClass div:nth-child(1) {
-  top: 38%;
+  top: 41%;
   left: 50%;
 }
 main .allAboutMe .aboutMyLife .experience .pseudoClass {
-  margin-top: 40;
+  margin-top: 35px;
   height: 920px;
   width: 3px;
 }
 main .allAboutMe .aboutMyLife .experience .pseudoClass div:nth-child(1) {
-  top: 20%;
+  top: 18%;
   left: 50%;
 }
 main .allAboutMe .aboutMyLife .experience .pseudoClass div:nth-child(2) {
@@ -737,7 +695,7 @@ main .allAboutMe .aboutMyLife .experience .pseudoClass div:nth-child(2) {
   left: 50%;
 }
 main .allAboutMe .aboutMyLife .experience .pseudoClass::before {
-  top: 87%;
+  top: 89%;
 }
 @media (max-width: 1400px) {
   main .allAboutMe .aboutMyLife .experience {
@@ -781,6 +739,9 @@ main .hobby .myStory .firstPart {
   color: #808080;
   margin-top: 90px;
 }
+main .hobby .myStory .firstPart p {
+  font-size: 24px;
+}
 @media (max-width: 1350px) {
   main .hobby .myStory {
     max-width: 100%;
@@ -811,6 +772,7 @@ main .hobby .layoutVisible {
 main .hobby .allcarousel {
   position: relative;
   margin-left: 30px;
+  margin-right: 30px;
   margin-top: 100px;
   width: 530px;
   height: 360px;
@@ -820,7 +782,7 @@ main .hobby .allcarousel {
 main .hobby .allcarousel .slides {
   display: flex;
 }
-main .hobby .allcarousel .slides .slide img {
+main .hobby .allcarousel .slides img {
   width: 530px;
   height: 360px;
 }
@@ -848,7 +810,7 @@ main .hobby .allcarousel .imgBtn .prevImg {
     width: 400px;
     height: 250px;
   }
-  main .hobby .allcarousel img {
+  main .hobby .allcarousel .slides .slide img {
     width: 400px;
     height: 250px;
   }
@@ -858,13 +820,10 @@ main .hobby .allcarousel .imgBtn .prevImg {
     width: 300px;
     height: 250px;
   }
-  main .hobby .allcarousel img {
+  main .hobby .allcarousel .slides .slide img {
     width: 300px;
     height: 250px;
   }
-}
-main .hobby .allcarousel {
-  margin-right: 30px;
 }
 @media (max-width: 1080px) {
   main .hobby {
@@ -896,7 +855,7 @@ main .contactSection .textContact {
 main .contactSection .textContact .askMe {
   margin-top: 50px;
   margin-bottom: 10px;
-  font-family: "Asul", sans-serif;
+  font-size: 36px;
   color: var(--word-color);
 }
 main .contactSection .textContact p {
@@ -951,6 +910,7 @@ main .contact-form textarea {
   border: none;
   font-size: 20px;
   border-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
 }
 main .contact-form input[type=submit] {
   margin-top: 20px;
@@ -1017,6 +977,11 @@ footer .socialMedia .iconsTheSame {
 }
 footer .socialMedia .iconsTheSame i {
   color: var(--word-color);
+}
+@media (max-width: 600px) {
+  footer .socialName {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1080px) {

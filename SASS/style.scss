@@ -5,12 +5,6 @@
 }
 :root {
 	--word-color: #ff4321;
-	--color-dark: black;
-	--color-gray: Gainsboro;
-	--color-light: white;
-	--color-dark-bg: #1e1c1c;
-	--color-dark-gray: #2b2929;
-	--color-dark-btn-bg: #2c2a2a;
 }
 
 body {
@@ -21,29 +15,26 @@ body {
 	background-color: #e6ebf3;
 	font-size: 26px;
 	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-// -------------------Global variables------------------
-
+// -------------------Global classes------------------
 .introducingYourself {
 	height: 52px;
 	margin-top: 20px;
-	font-size: 40px;
-	font-family: 'Asul', sans-serif;
-	transform: translateY(-700%);
-	transition: transform 2s;
+	font-size: 42px;
 	span {
-		font-size: 34px;
+		font-size: 37px;
 		font-family: 'Julee', cursive;
 		color: var(--word-color);
 	}
 }
 .mainText {
-	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
 	margin-top: 50px;
 	color: #808080;
-	transition: transform 2s, opacity 4s;
 }
+//-------------------Button day/night-------------------
 .dayNight {
 	position: fixed;
 	padding: 5px;
@@ -64,6 +55,7 @@ body {
 .dayNight:hover {
 	scale: 1.1;
 }
+//-------------------Button to change collors-------------------
 .settings {
 	position: fixed;
 	padding: 5px;
@@ -109,6 +101,7 @@ body {
 	.colors {
 		width: 30px;
 		height: 30px;
+		border: none;
 		background-color: #808080;
 		border-radius: 50%;
 		cursor: pointer;
@@ -126,39 +119,11 @@ body {
 		background-color: #b0c223;
 	}
 	.color4 {
-		background-color: #45a049;
+		background-color: #ea00d6;
 	}
 }
 
-// -------------------Day/Night------------------
-// .colorNr1 {
-// 	background-color: #2b2929 !important;
-// }
-// .colorNr2 {
-// 	color: Gainsboro;
-// }
-// .colorNr3 {
-// 	background-color: Gainsboro !important;
-// }
-// .colorNr4 {
-// 	background-color: #1e1c1c !important;
-// }
-// .colorNr5 {
-// 	background-color: #2c2a2a !important;
-// }
-// .colorNr6 {
-// 	border-color: black !important;
-// }
-// .colorNr7 {
-// 	color: white !important;
-// }
-// .colorNr8 {
-// 	color: #808080 !important;
-// }
-// .colorNr9 {
-// 	background-color: black !important;
-// }
-// -------------------Chat------------------
+// -------------------chat button------------------
 .chatMe {
 	position: fixed;
 	padding: 5px;
@@ -184,7 +149,7 @@ body {
 		display: none;
 	}
 }
-
+// -------------------chat------------------
 .chat {
 	position: fixed;
 	padding: 5px;
@@ -228,7 +193,6 @@ body {
 		border-radius: 30px;
 	}
 	.pStyle {
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		text-align: center;
 		font-size: 16px;
 		color: white;
@@ -309,20 +273,8 @@ body {
 	}
 }
 
-// -------------------Appearing elements-------------------
+// -------------------Appearing chat and settings-------------------
 
-.hideElementsRight {
-	opacity: 0;
-	transform: translateX(300%);
-}
-.hideElementsLeft {
-	opacity: 0;
-	transform: translateX(-300%);
-}
-.hideElementsTop {
-	opacity: 0;
-	transform: translatey(-700%);
-}
 .returnOfElements {
 	opacity: 1;
 	transform: translateX(0);
@@ -332,8 +284,9 @@ body {
 
 .nameOfWeb {
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 
+	// -------------------Burger navigation-------------------
 	.burgerMenu {
 		display: none;
 		position: fixed;
@@ -378,6 +331,8 @@ body {
 			transition: transform 1s, transform-origin 1s;
 		}
 	}
+
+	//-------------------Main navigation-------------------
 	.allNav {
 		display: flex;
 		flex-direction: column;
@@ -388,13 +343,9 @@ body {
 		background-color: #e9edf4;
 		border-right: 2px solid black;
 		border-right-color: rgba(0, 0, 0, 0.04);
-		.navLinks {
-			font-family: 'Asul', sans-serif;
-		}
 	}
 
 	h1 {
-		font-family: 'Asul', sans-serif;
 		font-size: 30px;
 		margin-top: 50px;
 		margin-left: 10px;
@@ -404,14 +355,6 @@ body {
 			font-family: 'Caveat', cursive;
 			color: var(--word-color);
 		}
-	}
-	.fa-bars {
-		font-size: 2rem;
-		color: #333;
-	}
-	.fa-x {
-		font-size: 2rem;
-		color: #333;
 	}
 
 	.navClass {
@@ -426,9 +369,11 @@ body {
 				border-bottom-color: rgba(0, 0, 0, 0.05);
 				.navLinks {
 					display: inline-block;
+					font-weight: bold;
+					font-size: 22px;
 					color: black;
 					text-decoration: none;
-					font-size: 22px;
+					font-family: 'Source Sans Pro', sans-serif;
 					transition: color 0.4s, transform 0.4s;
 				}
 				.navLinks:hover {
@@ -470,17 +415,20 @@ main {
 			flex-direction: row;
 
 			.textHome {
-				margin-bottom: 60px;
+				margin-bottom: 70px;
 				margin-left: 30px;
 
 				h2 {
 					font-size: 42px;
-					font-family: 'Asul' cursive;
-					transition: transform 2s;
+					font-weight: bold;
+
 					span {
 						font-family: 'Julee', cursive;
 						color: var(--word-color);
 					}
+				}
+				.mainText {
+					margin-top: 100px;
 				}
 			}
 			.imgMe {
@@ -489,7 +437,6 @@ main {
 				padding: 20px;
 				margin-top: 50px;
 				border-radius: 70px;
-				transition: transform 2s, opacity 4s;
 			}
 
 			@media (min-width: 1250px) {
@@ -522,13 +469,11 @@ main {
 		background-color: var(--word-color);
 		color: #eeeef4;
 		cursor: pointer;
-		transition: transform 2s 0.5s, opacity 3s 0.5s;
 	}
 	.titleOfSection {
 		position: absolute;
 		top: 50px;
 		font-size: 36px;
-		transition: transform 2s;
 		.longLine {
 			height: 5px;
 			width: 80px;
@@ -544,27 +489,19 @@ main {
 		}
 	}
 
-	// -------------------allAboutMe-------------------
+	// -------------------allAboutMe section-------------------
 
 	.allAboutMe {
 		padding: 20px;
 		margin-left: 300px;
-
 		.mainText {
 			font-size: 20px;
 		}
+		// -------------------my data-------------------
 		.myData {
 			display: flex;
 			flex-direction: row;
 			margin-top: 80px;
-
-			.leftUlData {
-				transition: transform 2s 1s, opacity 4s 1s;
-			}
-			.rightUlData {
-				transition: transform 2s 1s, opacity 4s 1s;
-			}
-
 			ul {
 				margin-right: 20px;
 				font-size: 20px;
@@ -575,15 +512,13 @@ main {
 					border-bottom: 2px solid black;
 					border-bottom-color: rgba(0, 0, 0, 0.05);
 					padding-bottom: 8px;
-					font-family: 'Roboto', sans-serif;
-
 					span {
-						font-family: 'Asul', sans-serif;
 						font-weight: bold;
 						color: black;
 					}
 				}
 			}
+			// -------------------progressBars-------------------
 			.circle {
 				margin-left: auto;
 				margin-right: auto;
@@ -627,7 +562,7 @@ main {
 					height: 100%;
 					border-radius: 50%;
 					stroke-dashoffset: 190;
-					animation: progress 3s 3s linear forwards;
+					animation: progress 3s linear forwards;
 				}
 				.progressHtml {
 					stroke-dasharray: 480;
@@ -655,12 +590,13 @@ main {
 					font-weight: 600;
 				}
 			}
-		}
-		@media (max-width: 1230px) {
-			.circle {
-				display: none;
+			@media (max-width: 1230px) {
+				.circle {
+					display: none;
+				}
 			}
 		}
+
 		@media (max-width: 560px) {
 			.myData {
 				flex-direction: column;
@@ -694,11 +630,14 @@ main {
 				margin-top: 0;
 			}
 		}
+
+		// -------------------education and experience-------------------
 		.aboutMyLife {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
 			margin-top: 250px;
+			font-family: 'Source Sans Pro';
 			transform: scale(0.1);
 			opacity: 0.1;
 			transition: transform 2s, opacity 4s;
@@ -728,7 +667,7 @@ main {
 			.pseudoClass {
 				margin-top: 115px;
 				height: 840px;
-				width: 3px;
+				width: 2px;
 				margin-left: 20px;
 				background-color: var(--word-color);
 				position: relative;
@@ -768,19 +707,19 @@ main {
 			}
 
 			.pseudoClass div:nth-child(1) {
-				top: 38%;
+				top: 41%;
 				left: 50%;
 			}
 
 			.experience {
 				.pseudoClass {
-					margin-top: 40;
+					margin-top: 35px;
 					height: 920px;
 					width: 3px;
 				}
 
 				.pseudoClass div:nth-child(1) {
-					top: 20%;
+					top: 18%;
 					left: 50%;
 				}
 
@@ -790,7 +729,7 @@ main {
 				}
 
 				.pseudoClass::before {
-					top: 87%;
+					top: 89%;
 				}
 			}
 			@media (max-width: 1400px) {
@@ -821,7 +760,7 @@ main {
 		}
 	}
 
-	// ------------------hobby------------------
+	// ------------------hobby section------------------
 
 	.hobby {
 		display: flex;
@@ -837,9 +776,13 @@ main {
 		.myStory {
 			margin-top: 100px;
 			max-width: 40%;
+
 			.firstPart {
 				color: #808080;
 				margin-top: 90px;
+				p {
+					font-size: 24px;
+				}
 			}
 		}
 		@media (max-width: 1350px) {
@@ -874,6 +817,7 @@ main {
 		.allcarousel {
 			position: relative;
 			margin-left: 30px;
+			margin-right: 30px;
 			margin-top: 100px;
 			width: 530px;
 			height: 360px;
@@ -882,11 +826,9 @@ main {
 
 			.slides {
 				display: flex;
-				.slide {
-					img {
-						width: 530px;
-						height: 360px;
-					}
+				img {
+					width: 530px;
+					height: 360px;
 				}
 			}
 
@@ -915,7 +857,7 @@ main {
 			.allcarousel {
 				width: 400px;
 				height: 250px;
-				img {
+				.slides .slide img {
 					width: 400px;
 					height: 250px;
 				}
@@ -925,15 +867,11 @@ main {
 			.allcarousel {
 				width: 300px;
 				height: 250px;
-				img {
+				.slides .slide img {
 					width: 300px;
 					height: 250px;
 				}
 			}
-		}
-
-		.allcarousel {
-			margin-right: 30px;
 		}
 	}
 
@@ -954,6 +892,8 @@ main {
 			display: none;
 		}
 	}
+
+	// ------------------contact section------------------
 	.contactSection {
 		margin-left: 300px;
 		padding: 20px;
@@ -965,7 +905,7 @@ main {
 			.askMe {
 				margin-top: 50px;
 				margin-bottom: 10px;
-				font-family: 'Asul', sans-serif;
+				font-size: 36px;
 				color: var(--word-color);
 			}
 			p {
@@ -1006,6 +946,8 @@ main {
 			flex-direction: column;
 		}
 	}
+
+	// ------------------contact form------------------
 	.contact-form {
 		margin-top: 80px;
 		padding: 10px;
@@ -1025,6 +967,7 @@ main {
 		border: none;
 		font-size: 20px;
 		border-radius: 20px;
+		font-family: 'Courier New', Courier, monospace;
 	}
 
 	.contact-form input[type='submit'] {
@@ -1040,6 +983,7 @@ main {
 		cursor: pointer;
 	}
 }
+// ------------------thanks for your email------------------
 .thanksMessage {
 	display: flex;
 	align-items: center;
@@ -1073,6 +1017,7 @@ main {
 		cursor: pointer;
 	}
 }
+// ------------------my social media------------------
 footer {
 	padding: 20px;
 	margin-left: 300px;
@@ -1092,6 +1037,11 @@ footer {
 			}
 		}
 	}
+	@media (max-width: 600px) {
+		.socialName {
+			font-size: 18px;
+		}
+	}
 }
 @media (max-width: 1080px) {
 	footer,
@@ -1109,4 +1059,3 @@ footer {
 		margin-left: 400px;
 	}
 }
-

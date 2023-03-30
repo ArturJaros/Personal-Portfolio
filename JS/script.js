@@ -2,7 +2,7 @@ const dayNight = document.querySelector('.dayNight')
 const body = document.querySelector('body')
 const allNav = document.querySelector('.allNav')
 const textElements = document.querySelectorAll(
-	'h1, h2, .introducingYourself,.myStoryDescription,  .border, .navLinks, .socialName '
+	'h1, h2,h3, .introducingYourself,.myStoryDescription,  .border, .navLinks, .socialName '
 )
 const mainText = document.querySelector('.mainText')
 const moreAboutMe = document.querySelector('.moreAboutMe')
@@ -66,15 +66,6 @@ const chat = document.querySelector('.chat')
 const chatOff = document.querySelector('.chatOff')
 const askMeRest = document.querySelector('.askMeRest')
 const introduceChatMeChatMe = document.querySelector('.introduceChatMeChatMe p')
-const colorNr1 = document.querySelector('.colorNr1')
-const colorNr2 = document.querySelector('.colorNr2')
-const colorNr3 = document.querySelector('.colorNr3')
-const colorNr4 = document.querySelector('.colorNr4')
-const colorNr5 = document.querySelector('.colorNr5')
-const colorNr6 = document.querySelector('.colorNr6')
-const colorNr7 = document.querySelector('.colorNr7')
-const colorNr8 = document.querySelector('.colorNr8')
-const colorNr9 = document.querySelector('.colorNr9')
 
 // ---------writing and deleting text---------
 
@@ -110,23 +101,22 @@ const darkColor = 'black'
 const grayColor = 'Gainsboro'
 const mutedTextColor = '#808080'
 const lightColor = 'white'
-const lightBgColor = '#e2e5e9'
+const lightBgColor = '#e6ebf3'
 const darkBgColor = '#1e1c1c'
-const lightNavBgColor = '#e2e5e9'
 const darkGrayColor = '#2b2929'
 const lightIcon = 'fa-solid fa-moon'
 const darkIcon = 'fa-solid fa-sun'
 const darkBtnBgColor = '#2c2a2a'
 
 function allchanges() {
-	allNav.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+	allNav.style.backgroundColor = dark ? darkGrayColor : lightBgColor
 	if (mainText) {
 		mainText.style.color = dark ? grayColor : mutedTextColor
 	}
 	dayNight.style.backgroundColor = dark ? darkBtnBgColor : lightColor
 	settings.style.backgroundColor = dark ? darkBtnBgColor : lightColor
 	chatMe.style.backgroundColor = dark ? darkBtnBgColor : lightColor
-	chat.style.backgroundColor = dark ? darkGrayColor : lightNavBgColor
+	chat.style.backgroundColor = dark ? darkGrayColor : lightBgColor
 	introduceChatMeChatMe.style.color = dark ? grayColor : darkColor
 	chatOff.style.color = dark ? grayColor : darkColor
 	faGear.style.color = dark ? grayColor : darkColor
@@ -216,11 +206,33 @@ settings.addEventListener('click', () => {
 	dayNight.classList.toggle('buttonsLeft')
 	changeColor.classList.toggle('returnOfElements')
 })
+function colors() {
+	color1.addEventListener('click', () => {
+		document.documentElement.style.setProperty('--word-color', '#ff4321')
+	})
+	color2.addEventListener('click', () => {
+		document.documentElement.style.setProperty('--word-color', '#455ca0')
+	})
+	color3.addEventListener('click', () => {
+		document.documentElement.style.setProperty('--word-color', '#b0c223')
+	})
+	color4.addEventListener('click', () => {
+		document.documentElement.style.setProperty('--word-color', '#ea00d6')
+	})
+}
 
-color1.addEventListener('click', () => document.documentElement.style.setProperty('--word-color', '#ff4321'))
-color2.addEventListener('click', () => document.documentElement.style.setProperty('--word-color', '#455ca0'))
-color3.addEventListener('click', () => document.documentElement.style.setProperty('--word-color', '#b0c223'))
-color4.addEventListener('click', () => document.documentElement.style.setProperty('--word-color', '#45a049'))
+colors()
+
+//---------Moving education and experience---------
+
+if (aboutMyLife) {
+	window.addEventListener('scroll', () => {
+	  if (window.pageYOffset > 600) {
+		aboutMyLife.style.transform = 'scale(1)';
+		aboutMyLife.style.opacity = '1';
+	  }
+	});
+  }
 
 //chat
 function addAskMe1() {

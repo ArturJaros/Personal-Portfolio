@@ -21,8 +21,7 @@ allCarousels.forEach(carousel => {
 	slide.append(firstClone)
 	slide.prepend(lastClone)
 
-	const slideWidth = slides[index].clientWidth
-
+	let slideWidth = slides[index].clientWidth
 	slide.style.transform = `translateX(${-slideWidth * index}px)`
 
 	const startSlide = () => {
@@ -51,6 +50,7 @@ allCarousels.forEach(carousel => {
 		slides = getSlides()
 		if (index >= slides.length - 1) return
 		index++
+		slideWidth = slides[index].clientWidth
 		slide.style.transform = `translateX(${-slideWidth * index}px)`
 		slide.style.transition = '.7s'
 	}
@@ -58,6 +58,7 @@ allCarousels.forEach(carousel => {
 	const moveToPreviousSlide = () => {
 		if (index <= 0) return
 		index--
+		slideWidth = slides[index].clientWidth
 		slide.style.transform = `translateX(${-slideWidth * index}px)`
 		slide.style.transition = '.7s'
 	}
@@ -73,6 +74,11 @@ allCarousels.forEach(carousel => {
 	prevBtn.addEventListener('click', moveToPreviousSlide)
 
 	startSlide()
+
+	window.addEventListener('resize', () => {
+		slideWidth = slides[index].clientWidth
+		slide.style.transform = `translateX(${-slideWidth * index}px)`
+	})
 })
 
 // ---------change the order of elements --------- \\
@@ -85,6 +91,7 @@ const myStory = document.querySelector('.secoundLayout .myStory')
 const thirdLayout = document.querySelector('.thirdLayout')
 const thirdLayoutcarousel = document.querySelector('.thirdLayout .allcarousel')
 const thirdLayoutmyStory = document.querySelector('.thirdLayout .myStory')
+const titleOfSection2 = document.querySelector('.titleOfSection')
 
 function adjustLayout() {
 	if (window.innerWidth < 1350) {
@@ -92,13 +99,12 @@ function adjustLayout() {
 	} else secound.insertBefore(carousel, myStory)
 }
 adjustLayout()
-
+titleOfSection2.classList.add('returnOfElements')
 window.addEventListener('resize', adjustLayout)
 
 // ---------Moving Elements--------- \\
 const laoyoutWay = document.querySelector('.laoyoutWay')
 const laoyoutWay2 = document.querySelector('.laoyoutWay2')
-
 
 laoyoutWay.classList.add('layoutVisible')
 firstLayout.classList.add('layoutVisible')
@@ -106,12 +112,5 @@ firstLayout.classList.add('layoutVisible')
 window.addEventListener('scroll', () => {
 	if (window.pageYOffset > 300) {
 		secound.classList.add('layoutVisible')
-		laoyoutWay2.classList.add('layoutVisible')
 	}
 })
-window.addEventListener('scroll', () => {
-	if (window.pageYOffset > 900) {
-		thirdLayout.classList.add('layoutVisible')
-	}
-})
-
